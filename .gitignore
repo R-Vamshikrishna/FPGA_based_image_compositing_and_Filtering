@@ -1,0 +1,4 @@
+*.bit *.bin *.jou *.ucf *.dcp
+runs/ sim/ .Xil/ *.cache/ *.data/
+vivado*.log
+.DS_Store .vscode/ __pycache__/
