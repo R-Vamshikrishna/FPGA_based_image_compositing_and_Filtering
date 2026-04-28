@@ -28,10 +28,10 @@ The pipeline reads a 320×240 foreground image (`fg.mem`) and a 320×240 backgro
 
 ```
                        ┌─────────────────────────────────────────────────────────┐
-                       │              top_combined                                │
-                       │                                                          │
+                       │              top_combined                               │
+                       │                                                         │
    100 MHz ──► clk_div ──► pix_ce          ┌──────────────────────────────────┐  │
-                       │                   │       top_image_pipeline          │  │
+                       │                   │       top_image_pipeline         │  │
    hcount / vcount ────┼──────────────────►│                                  │  │
    (VGA timing)        │                   │  pixel_addr ──► fg_image_rom     │  │
                        │                   │             ──► bg_image_rom     │  │
@@ -45,8 +45,8 @@ The pipeline reads a 320×240 foreground image (`fg.mem`) and a 320×240 backgro
                        │                   │                                  │  │
                        │                   │  chroma_key_match? bg : fg ─────►│  │
                        │                   └──────────────────────────────────┘  │
-                       │                                  │ rgb_composited        │
-                       │                                  ▼                       │
+                       │                                  │ rgb_composited       │
+                       │                                  ▼                      │
                        │                           ┌────────────┐                │
                        │                           │  filters   │                │
                        │                           │  (sepia /  │                │
